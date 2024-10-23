@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometer Zähler</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Stil für das Modal */
+        .modal {
+            display: none; /* Standardmäßig versteckt */
+            position: fixed;
+            z-index: 1; /* Über andere Inhalte */
+            left: 0;
+            top: 0;
+            width: 100%; /* Volle Breite */
+            height: 100%; /* Volle Höhe */
+            overflow: auto; /* Scrollen falls nötig */
+            background-color: rgba(0,0,0,0.8); /* Halbdurchsichtiger Hintergrund */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ccc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kilometer Zähler</h1>
+    
+    <h2>Gruppe 1</h2>
+    <form id="group1-form">
+        <input type="number" id="group1-km" placeholder="Kilometer hinzufügen" required>
+        <input type="file" id="group1-image" accept="image/*" required>
+        <input type="text" id="group1-name" placeholder="Name" required>
+        <button type="submit">Hinzufügen</button>
+    </form>
+    
+    <h2>Gruppe 2</h2>
+    <form id="group2-form">
+        <input type="number" id="group2-km" placeholder="Kilometer hinzufügen" required>
+        <input type="file" id="group2-image" accept="image/*" required>
+        <input type="text" id="group2-name" placeholder="Name" required>
+        <button type="submit">Hinzufügen</button>
+    </form>
+    
+    <canvas id="kmChart" width="400" height="200"></canvas>
+
+    <h2>Einträge Gruppe 1</h2>
+    <table id="group1-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Kilometer</th>
+                <th>Bild</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Hier werden die Einträge für Gruppe 1 hinzugefügt -->
+        </tbody>
+    </table>
+
+    <h2>Einträge Gruppe 2</h2>
+    <table id="group2-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Kilometer</th>
+                <th>Bild</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Hier werden die Einträge für Gruppe 2 hinzugefügt -->
+        </tbody>
+    </table>
+
+    <!-- Modal für große Bilder -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Bild">
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Grundlegende Stile für den gesamten Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Heller Hintergrund */
+    color: #333; /* Textfarbe */
+}
+
+/* Hauptüberschrift */
+h1 {
+    color: #2c3e50; /* Dunklere Überschrift */
+    text-align: center; /* Zentrieren der Überschrift */
+    margin-bottom: 20px;
+}
+
+/* Überschrift für Gruppen */
+h2 {
+    color: #2980b9; /* Blau für Gruppentitel */
+    margin-top: 20px; /* Abstand über der Gruppentitel */
+}
+
+/* Formular-Stile */
+form {
+    background: #fff; /* Weißer Hintergrund für Formulare */
+    border-radius: 5px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten für das Formular */
+    padding: 15px; /* Innenabstand */
+    margin-bottom: 20px;
+}
+
+/* Eingabefelder */
+input[type="number"],
+input[type="text"],
+input[type="file"] {
+    padding: 10px; /* Innenabstand für Eingabefelder */
+    border: 1px solid #ccc; /* Rahmenfarbe */
+    border-radius: 4px; /* Abgerundete Ecken */
+    width: calc(100% - 22px); /* Breite anpassen */
+    max-width: 300px; /* Maximalbreite für größere Bildschirme */
+    margin-bottom: 10px; /* Abstand zwischen Eingabefeldern */
+}
+
+/* Button-Stile */
+button {
+    background-color: #2980b9; /* Hintergrundfarbe für Button */
+    color: white; /* Textfarbe für Button */
+    border: none; /* Kein Rahmen */
+    padding: 10px 15px; /* Innenabstand für Button */
+    border-radius: 4px; /* Abgerundete Ecken für Button */
+    cursor: pointer; /* Zeigerzeiger bei Hover */
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+}
+
+/* Button Hover Effekt */
+button:hover {
+    background-color: #1c5980; /* Dunklere Farbe bei Hover */
+}
+
+/* Chart-Stile */
+canvas {
+    display: block; /* Blockanzeige für das Diagramm */
+    max-width: 100%; /* Maximale Breite für Responsive Design */
+    margin: 0 auto; /* Zentrierung */
+}
+
+/* Tabelle für Gruppeneinträge */
+table {
+    width: 100%; /* Volle Breite */
+    border-collapse: collapse; /* Keine Doppellinien */
+    margin-top: 20px; /* Abstand zur vorhergehenden Sektion */
+}
+
+table, th, td {
+    border: 1px solid #ccc; /* Rahmen für Tabelle */
+}
+
+th {
+    background-color: #2980b9; /* Hintergrundfarbe für Tabellenkopf */
+    color: white; /* Schriftfarbe für Tabellenkopf */
+    padding: 10px; /* Innenabstand für Tabellenkopf */
+}
+
+td {
+    padding: 10px; /* Innenabstand für Tabelleninhalt */
+    text-align: center; /* Zentrierte Textausrichtung */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input[type="number"],
+    input[type="text"],
+    input[type="file"],
+    button {
+        width: 100%; /* Volle Breite auf kleinen Bildschirmen */
+    }
+}
