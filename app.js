@@ -44,10 +44,10 @@ const uploadImage = async (group, file) => {
 // Formulare verarbeiten
 document.getElementById("group1-form").onsubmit = async (e) => {
     e.preventDefault();
-    const km = document.getElementById("group1-km").value;
+    const km = parseFloat(document.getElementById("group1-km").value); // Parse als Dezimalzahl
     const imageFile = document.getElementById("group1-image").files[0];
     const name = document.getElementById("group1-name").value;
-    await addKilometers("group1", Number(km), imageFile, name);
+    await addKilometers("group1", km, imageFile, name);
     document.getElementById("group1-km").value = '';
     document.getElementById("group1-image").value = '';
     document.getElementById("group1-name").value = '';
@@ -56,10 +56,10 @@ document.getElementById("group1-form").onsubmit = async (e) => {
 
 document.getElementById("group2-form").onsubmit = async (e) => {
     e.preventDefault();
-    const km = document.getElementById("group2-km").value;
+    const km = parseFloat(document.getElementById("group2-km").value); // Parse als Dezimalzahl
     const imageFile = document.getElementById("group2-image").files[0];
     const name = document.getElementById("group2-name").value;
-    await addKilometers("group2", Number(km), imageFile, name);
+    await addKilometers("group2", km, imageFile, name);
     document.getElementById("group2-km").value = '';
     document.getElementById("group2-image").value = '';
     document.getElementById("group2-name").value = '';
